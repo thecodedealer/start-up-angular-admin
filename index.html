@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="startupApp">
+<head>
+    <meta charset="UTF-8">
+
+    <title>Angular StartUP Admin App</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="shortcut icon" href="img/favicon.svg"/>
+
+    <!--Metadata-->
+    <meta name="description"
+          content="AngularJS StartUP Admin App"/>
+    <meta name="keywords"
+          content="angularjs, sass, gulp, bootstrap">
+
+
+    <!--Styles-->
+    <!--<link href="node_modules/bootstrap/dist/css/bootstrap.min.css">-->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+          integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link href="style/style.css" rel="stylesheet" type="text/css">
+
+    <!--JS-->
+    <script src="node_modules/feather-icons/dist/feather.js"></script>
+
+</head>
+<body>
+
+
+<!--Views-->
+<nav class="navbar navbar-dark sticky-top bg-dark flex-md-nowrap p-0"
+     ui-view="header">
+</nav>
+
+<div class="container-fluid">
+    <div class="row">
+
+        <!--Side Nan-->
+        <nav class="col-md-2 d-none d-md-block bg-light sidebar">
+            <div class="sidebar-sticky">
+                <ul class="nav flex-column">
+                    <li class="nav-item">
+                        <a class="nav-link" ui-sref="dashboard" ui-sref-active="active">
+                            <span data-feather="bar-chart-2"></span>
+                            Dashboard <span class="sr-only">(current)</span>
+                        </a>
+
+                    </li>
+                    <!--<li class="nav-item">-->
+                    <!--<a class="nav-link" ui-sref="search" ui-sref-active="active">-->
+                    <!--<span data-feather="search"></span>-->
+                    <!--Search <span class="sr-only">(current)</span>-->
+                    <!--</a>-->
+                    <!--</li>-->
+
+                    <li class="nav-item">
+                        <a class="nav-link" ui-sref="products" ui-sref-active="active">
+                            <span data-feather="package"></span>
+                            Products<span class="sr-only">(current)</span>
+                        </a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link" ui-sref="materials" ui-sref-active="active">
+                            <span data-feather="home"></span>
+                            Factory <span class="sr-only">(current)</span>
+                        </a>
+                    </li>
+
+
+                    <li class="nav-item">
+                        <a class="nav-link" ui-sref="stock" ui-sref-active="active">
+                            <span data-feather="list"></span>
+                            Stoc<span class="sr-only">(current)</span>
+                        </a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link" ui-sref="stock" ui-sref-active="active">
+                            <span data-feather="clipboard"></span>
+                            Proiecte<span class="sr-only">(current)</span>
+                        </a>
+                    </li>
+
+
+                </ul>
+
+                <h6 class="sidebar-heading d-flex justify-content-between align-items-center px-3 mt-4 mb-1 text-muted">
+                    <span>Saved reports</span>
+                    <a class="d-flex align-items-center text-muted" href="#">
+                        <span data-feather="plus-circle"></span>
+                    </a>
+                </h6>
+                <ul class="nav flex-column mb-2">
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">
+                            <span data-feather="file-text"></span>
+                            Current month
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">
+                            <span data-feather="file-text"></span>
+                            Last quarter
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">
+                            <span data-feather="file-text"></span>
+                            Social engagement
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">
+                            <span data-feather="file-text"></span>
+                            Year-end sale
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+
+        <!--Main Content-->
+        <main role="main" class="col-md-9 ml-sm-auto col-lg-10 pt-3 px-4">
+            <div ui-view="content"></div>
+        </main>
+
+    </div>
+</div>
+
+
+<!--Angular Scripts-->
+<script src="node_modules/jquery/dist/jquery.js"></script>
+<script src="node_modules/angular/angular.js"></script>
+<script src="node_modules/@uirouter/angularjs/release/angular-ui-router.js"></script>
+<script src="node_modules/angular-resource/angular-resource.js"></script>
+<script src="node_modules/angular-cookies/angular-cookies.js"></script>
+
+<script src="scripts/app.js"></script>
+<script src="scripts/controllers.js"></script>
+<script src="scripts/services.js"></script>
+<script src="scripts/filters.js"></script>
+<script src="scripts/directives.js"></script>
+
+<!--Assets Script-->
+<script src="node_modules/bootstrap/dist/js/bootstrap.bundle.js"></script>
+<script src="node_modules/sweetalert/dist/sweetalert.min.js"></script>
+
+
+<!--Custom script-->
+<script src="scripts/init.js"></script>
+
+<!--Init-->
+<script>
+    feather.replace()
+</script>
+
+
+</body>
+</html>
